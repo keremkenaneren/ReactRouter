@@ -9,6 +9,8 @@ import Contact from "./components/Contact.jsx";
 import Email from "./components/SubComponents/Email.jsx";
 import LinkedIn from "./components/SubComponents/Linkedln.jsx";
 import Github from "./components/SubComponents/Github.jsx";
+import Members from "./components/Members.jsx";
+import MemberDetails from "./components/MemberDetails.jsx";
 
 function App() {
 
@@ -24,9 +26,10 @@ function App() {
                 <Route path="linkedln" element={<LinkedIn/>}/>
                 <Route path="github" element={<Github/>}/>
             </Route>
+            <Route path="/members" element={<Members/>} />
+            <Route path="/members/:memberId" element={<MemberDetails/>} />
             <Route path="*" element={<WrongPath/>} />
         </Routes>
-
     </div>
   )
 }
